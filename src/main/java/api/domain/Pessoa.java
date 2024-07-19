@@ -30,7 +30,7 @@ public abstract class Pessoa implements Serializable {
     @CollectionTable(name = "PERFIS")             // nome da tabela
     protected Set<Integer> perfis = new HashSet<Integer>();
 
-    @JsonFormat(pattern = "dd/MM//yyyy")         // formatar o padram DATA
+    @JsonFormat(pattern = "dd/MM/yyyy")         // formatar o padram DATA
     protected LocalDate datacriacao = LocalDate.now();
 
 
