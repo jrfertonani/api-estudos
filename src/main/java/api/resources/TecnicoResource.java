@@ -2,6 +2,7 @@ package api.resources;
 
 import api.domain.dto.TecnicoDTO;
 import api.services.TecnicoService;
+import jakarta.validation.Valid;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -36,11 +37,11 @@ public class TecnicoResource {
     }
 
     @PostMapping
-    public ResponseEntity<TecnicoDTO> create(@RequestBody TecnicoDTO tecnicoDTO){
+    public ResponseEntity<TecnicoDTO> create(@Valid @RequestBody TecnicoDTO tecnicoDTO){
         URI uri = ServletUriComponentsBuilder
                 .fromCurrentRequest()
                 .path("/{id}")
-                .buildAndExpand(tecnicoService.create(tecnicoDTO))
+                .buildAndExpand(tecnicoService.create(tecnicoDTO).getId())
                 .toUri();
         return ResponseEntity.created(uri).body(tecnicoDTO);
     }
