@@ -59,4 +59,9 @@ public class TecnicoService {
         entity.setId(id);
         return tecnicoRepository.save(entity);
     }
+
+    public void delete(Integer id) {
+        findById(id);
+        tecnicoRepository.deleteById(id);
+    }
 }

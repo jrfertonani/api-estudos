@@ -5,9 +5,9 @@ import lombok.Getter;
 @Getter
 public enum Status {
     // aqui são os enums
-    ABERTO(0,"aberto"),
-    ANDAMENTO(1,"andemento"),
-    ENCERRADO(2,"encerrado");
+    ABERTO(0,"ABERTO"),
+    ANDAMENTO(1,"ANDAMENTO"),
+    ENCERRADO(2,"ENCERRADO");
 
     //aqui as instancias
     private final Integer codigo;
