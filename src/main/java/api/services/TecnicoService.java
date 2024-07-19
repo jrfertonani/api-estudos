@@ -50,4 +50,13 @@ public class TecnicoService {
             throw new DataIntegrityViolationException("E-Mail já cadastrado ");
         }
     }
+
+    public Tecnico update(Integer id, TecnicoDTO tecnicoDTO) {
+        tecnicoDTO.setId(id);
+        findById(id);
+        validaPorCpfEEmail(tecnicoDTO);
+        Tecnico entity = mapper.map(tecnicoDTO, Tecnico.class);
+        entity.setId(id);
+        return tecnicoRepository.save(entity);
+    }
 }

@@ -1,5 +1,6 @@
 package api.resources;
 
+import api.domain.Tecnico;
 import api.domain.dto.TecnicoDTO;
 import api.services.TecnicoService;
 import jakarta.validation.Valid;
@@ -44,5 +45,12 @@ public class TecnicoResource {
                 .buildAndExpand(tecnicoService.create(tecnicoDTO).getId())
                 .toUri();
         return ResponseEntity.created(uri).body(tecnicoDTO);
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<TecnicoDTO> update(@PathVariable Integer id,
+                                             @Valid @RequestBody TecnicoDTO tecnicoDTO){
+        Tecnico obj = tecnicoService.update(id, tecnicoDTO);
+        return ResponseEntity.ok().body(tecnicoDTO);
     }
 }
