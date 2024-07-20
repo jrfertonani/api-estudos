@@ -21,9 +21,9 @@ public class Chamado implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @JsonFormat(pattern = "dd/MM//yyyy")         // formatar o padram DATA
+    @JsonFormat(pattern = "dd/MM//yyyy")         // formatar o padrao DATA
     private LocalDate dataAbertura = LocalDate.now();
-    @JsonFormat(pattern = "dd/MM//yyyy")         // formatar o padram DATA
+    @JsonFormat(pattern = "dd/MM//yyyy")         // formatar o padrao DATA
     private LocalDate dataFechamento;
 
     private Prioridade prioridade;

@@ -5,9 +5,9 @@ import lombok.Getter;
 @Getter
 public enum Perfil {
     // aqui são os enums
-    ADMIN(0,"admin"),
-    CLIENTE(1,"cliente"),
-    TECNICO(2,"tecnico");
+    ADMIN(0,"ADMIN"),
+    CLIENTE(1,"CLIENTE"),
+    TECNICO(2,"TECNICO");
 
     //aqui as instancias
     private final Integer codigo;
