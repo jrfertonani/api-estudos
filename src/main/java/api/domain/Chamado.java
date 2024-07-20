@@ -23,7 +23,7 @@ public class Chamado implements Serializable {
 
     @JsonFormat(pattern = "dd/MM//yyyy")         // formatar o padrao DATA
     private LocalDate dataAbertura = LocalDate.now();
-    @JsonFormat(pattern = "dd/MM//yyyy")         // formatar o padrao DATA
+    @JsonFormat(pattern = "dd/MM/yyyy")         // formatar o padrao DATA
     private LocalDate dataFechamento;
 
     private Prioridade prioridade;

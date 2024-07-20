@@ -20,4 +20,7 @@ public class ChamadoService {
         return obj.orElseThrow(() -> new ObjectNotFoundException("Objeto não encontrado " +id));
     }
 
+    public Object findAll() {
+        return chamadoRepository.findAll();
+    }
 }

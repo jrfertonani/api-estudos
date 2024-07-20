@@ -25,6 +25,13 @@ public class ChamadoResource {
    public ResponseEntity<ChamadoDTO> findById(@PathVariable Integer id){
         Chamado entity = chamadoService.findById(id);
         return ResponseEntity.ok().body(mapper.map(entity, ChamadoDTO.class));
-    }
+   }
+
+   @GetMapping
+    public ResponseEntity<ChamadoDTO> findAll(){
+        return ResponseEntity.ok().body(mapper.map(
+                chamadoService.findAll(), ChamadoDTO.class
+        ));
+   }
 
 }

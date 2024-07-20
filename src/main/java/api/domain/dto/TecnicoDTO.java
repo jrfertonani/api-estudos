@@ -36,7 +36,7 @@ public class TecnicoDTO implements Serializable {
     protected String email;
     protected Set<Integer> perfis = new HashSet<Integer>();
 
-    @JsonFormat(pattern = "dd/MM//yyyy")         // formatar o padram DATA
+    @JsonFormat(pattern = "dd/MM/yyyy")         // formatar o padram DATA
     protected LocalDate datacriacao = LocalDate.now();
 
 
